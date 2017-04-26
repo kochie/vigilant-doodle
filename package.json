@@ -1,0 +1,27 @@
+{
+  "name": "vigilant-doodle",
+  "version": "1.0.0",
+  "description": "A node server that let's you create an upload server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*.test.js",
+    "dev": "nodemon ./src/index.js",
+    "docker-dev": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kochie/vigilant-doodle.git"
+  },
+  "author": "Robert A. Koch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kochie/vigilant-doodle/issues"
+  },
+  "homepage": "https://github.com/kochie/vigilant-doodle#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

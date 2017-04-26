@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  app:
+    image: node:latest
+    depends_on:
+      - db
+    command: npm run docker-dev
+    working_dir: /usr/src/app/
+    ports:
+      - "3000:3000"
+    restart: always
+    volumes:
+      - .:/usr/src/app/
+  db:
+    image: postgres
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: always
+    environment:
+       POSTGRES_PASSWORD: 'supersecret'
+       POSTGRES_USER: 'postgres'
+       POSTGRES_DB: 'vigilant_doodle_db_dev'
+
+volumes:
+  db_data:
